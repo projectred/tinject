@@ -33,4 +33,8 @@ func TestNewStruct(t *testing.T) {
 	if a.Value() != 17 {
 		t.Errorf("it should be %d, but it is %d", 17, a.Value())
 	}
+	Fill(reflect.ValueOf(a), []KV{{K: "V", V: 20}})
+	if a.Value() != 20 {
+		t.Errorf("it should be %d, but it is %d", 20, a.Value())
+	}
 }

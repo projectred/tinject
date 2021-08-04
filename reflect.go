@@ -45,3 +45,4 @@ func fill(v reflect.Value, kvs []KV) {
 		}
 	}
 }
+func Fill(v reflect.Value, kvs []KV) { fill(v, kvs) }
